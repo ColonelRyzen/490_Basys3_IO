@@ -40,6 +40,23 @@ architecture Behavioral of PROJECT1 is
     signal numL : integer;  --number low
     signal numH : integer;  --number high
     signal numR : integer;  --number result
+    signal num0 : STD_LOGIC_VECTOR <= "11111100";
+    signal num1 : STD_LOGIC_VECTOR <= "01100000";
+    signal num2 : STD_LOGIC_VECTOR <= "11011010";
+    signal num3 : STD_LOGIC_VECTOR <= "11110010";
+    signal num4 : STD_LOGIC_VECTOR <= "01100110";
+    signal num5 : STD_LOGIC_VECTOR <= "10110110";
+    signal num6 : STD_LOGIC_VECTOR <= "10111110";
+    signal num7 : STD_LOGIC_VECTOR <= "11100000";
+    signal num8 : STD_LOGIC_VECTOR <= "11111110";
+    signal num9 : STD_LOGIC_VECTOR <= "11100110";
+    signal A : STD_LOGIC_VECTOR <= "11101110";
+    signal B : STD_LOGIC_VECTOR <= "11111110";
+    signal C : STD_LOGIC_VECTOR <= "10011100";
+    signal D : STD_LOGIC_VECTOR <= "11111100";
+    signal E : STD_LOGIC_VECTOR <= "10011110";
+    signal F : STD_LOGIC_VECTOR <= "10001110";
+    
 begin
     ledL <= swL;
     ledH <= swH;
@@ -51,9 +68,7 @@ begin
         --if button pressed
         if (btnC = '1') then
             --if button pushed (active high) add two numbers
-            numR <= numL + numH;
-            seg <= "10000000";
---            seg(0) <= '1';
+            numR <= numL + numH;     
         end if;
     end process;
 end Behavioral;
